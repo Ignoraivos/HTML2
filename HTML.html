@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocar Cor do Cenário</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeColor()">Mudar Cor</button>
+
+    <script>
+        // Array de cores
+        const colors = ['#FF6347', '#3CB371', '#1E90FF', '#FFD700', '#FF69B4'];
+
+        // Função para mudar a cor do fundo
+        function changeColor() {
+            // Obter uma cor aleatória do array
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            // Aplicar a cor ao fundo do body
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
